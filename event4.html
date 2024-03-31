@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Events Demo</title>
+<style>
+    #mouseBox {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div id="mouseBox">Click Me!</div>
+
+<script>
+    document.getElementById('mouseBox').addEventListener('click', function(event) {
+        alert('Box clicked!');
+    });
+
+    document.getElementById('mouseBox').addEventListener('mousedown', function(event) {
+        alert('Mouse down!');
+    });
+
+    document.getElementById('mouseBox').addEventListener('mouseup', function(event) {
+        alert('Mouse up!');
+    });
+
+    document.getElementById('mouseBox').addEventListener('mouseout', function(event) {
+        alert('Mouse out!');
+    });
+
+    document.getElementById('mouseBox').addEventListener('mouseover', function(event) {
+        alert('Mouse over!');
+    });
+</script>
+
+</body>
+</html>

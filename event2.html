@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag Events Demo</title>
+<style>
+    #draggableBox {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div id="draggableBox" draggable="true">Drag Me!</div>
+
+<script>
+    document.getElementById('draggableBox').addEventListener('drag', function(event) {
+        alert('Drag started!');
+    });
+
+    document.getElementById('draggableBox').addEventListener('dragend', function(event) {
+        alert('Drag ended!');
+    });
+
+    document.getElementById('draggableBox').addEventListener('dragover', function(event) {
+        event.preventDefault();
+    });
+
+    document.getElementById('draggableBox').addEventListener('drop', function(event) {
+        alert('Dropped!');
+    });
+</script>
+
+</body>
+</html>

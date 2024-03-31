@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clipboard Events Demo</title>
+</head>
+<body>
+
+<textarea id="clipboardInput" placeholder="Copy, cut, or paste text here"></textarea>
+
+<script>
+    document.getElementById('clipboardInput').addEventListener('copy', function(event) {
+        alert('Text copied!');
+    });
+
+    document.getElementById('clipboardInput').addEventListener('cut', function(event) {
+        alert('Text cut!');
+    });
+
+    document.getElementById('clipboardInput').addEventListener('paste', function(event) {
+        alert('Text pasted!');
+    });
+</script>
+
+</body>
+</html>

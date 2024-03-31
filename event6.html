@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Events Demo</title>
+<script>
+    window.onload = function() {
+        alert('Page loaded!');
+    };
+
+    window.onresize = function() {
+        alert('Window resized!');
+    };
+
+    window.onunload = function() {
+        alert('Page unloaded!');
+    };
+</script>
+</head>
+<body>
+    <select onchange="alert('Selection changed!')">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+</body>
+</html>
